@@ -30,6 +30,11 @@ export default function TestForm(props) {
         setText(result)
     }
 
+    const handleUpClearText = () => {
+        const result = text.replace(text, '');
+        setText(result)
+    }
+
     const handleOnChange = (event) => {
         setText(event.target.value)
     }
@@ -47,6 +52,7 @@ export default function TestForm(props) {
                 <button className="btn btn-primary mx-2" onClick={handleUpPunctuations}>Remove Punctuations</button>
                 <button className="btn btn-primary" onClick={handleUpNewLine}>Remove New Line</button>
                 <button className="btn btn-primary mx-2" onClick={handleUpExtraSpace}>Remove Extra Spaces</button>
+                <button className="btn btn-primary" onClick={handleUpClearText}>Clear Text</button>
             </div>
         </>
     )
