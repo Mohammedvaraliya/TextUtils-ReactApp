@@ -1,15 +1,19 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 
 export default function TestForm(props) {
-    const handleUpClick = () => {
-        console.log("Analyze button clicked");
+    const handleUpUppercase = () => {
         let upperText = text.toUpperCase();
         setText(upperText);
     }
 
+    const handleUpPunctuations = () => {
+        const regex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
+        const result = text.replace(regex, '');
+        setText(result)
+    }
+
     const handleOnChange = (event) => {
-        console.log("On Change")
         setText(event.target.value)
     }
 
@@ -21,7 +25,8 @@ export default function TestForm(props) {
                 <div className="mb-3">
                     <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="12"></textarea>
                 </div>
-                <button className="btn btn-primary" onClick={handleUpClick}>Analyze</button>
+                <button className="btn btn-primary mx-2" onClick={handleUpUppercase}>Convert To Uppercase</button>
+                <button className="btn btn-primary" onClick={handleUpPunctuations}>Remove Punctuations</button>
             </div>
         </>
     )
