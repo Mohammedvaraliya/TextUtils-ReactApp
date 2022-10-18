@@ -8,7 +8,7 @@ export default function About() {
     });
 
     const [btnText, setBtnText] = useState("Enable dark Mode");
-    const [colorClass, setColorClass] = useState("dark");
+    const [colorClass, setColorClass] = useState("");
 
     const applyStyles = () => {
         if (myStyle.color === 'black') {
@@ -25,7 +25,7 @@ export default function About() {
                 backgroundColor: "white",
             })
             setBtnText("Enable Dark Mode");
-            setColorClass("black");
+            setColorClass("white");
         }
     }
 
@@ -38,7 +38,7 @@ export default function About() {
                     </div>
                     <h1>About Us</h1>
 
-                    <div className="p-5 mb-4 bg-{colorClass} border rounded-3" style={myStyle}>
+                    <div className={`p-5 mb-4 bg-${colorClass} border rounded-3`} style={myStyle}>
                         <div className="container-fluid py-5 rounded-3" style={myStyle}>
                             <h3 className="display-5 fw-bold">Varaliya's TextUtils.com</h3>
                             <p className="col-md-8 fs-4">Text-Utils is a web tool to assist developers and other people in daily tasks by providing tools for manipulating text data. This tool include <b> Remove Punctuations, UPPERCASE, New Line Remove, Numbers Remover, and Extra Spaces Remover</b>, and many other tools to handle text.</p>
@@ -54,7 +54,7 @@ export default function About() {
                             </div>
                         </div>
                         <div className="col-md-6" style={myStyle}>
-                            <div className="h-100 p-5 bg-{colorClass} border rounded-3" style={myStyle}>
+                            <div className={`h-100 p-5 bg-${colorClass} border rounded-3`} style={myStyle}>
                                 <h3 style={myStyle}><br /><br /> <i> "If you want to increase your success rate, double your failure rate." </i></h3>
                             </div>
                         </div>
