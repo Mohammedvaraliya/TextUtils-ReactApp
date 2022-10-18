@@ -3,11 +3,22 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import TestForm from "./components/TestForm";
 import Alert from "./components/Alert";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light");
   const [textTheme, setTextTheme] = useState("Enable DarkMode");
   const [alert, setAlert] = useState(null);
+  const [colorClass, setColorClass] = useState("");
+  const [myStyle, setMyStyle] = useState({
+    color: "black",
+    backgroundColor: "white",
+  });
 
   const showAlert = (message, type) => {
     setAlert({
@@ -38,12 +49,38 @@ function App() {
     }
 
   }
+
+  const applyStyles = () => {
+    if (myStyle.color === 'black') {
+        setMyStyle({
+            color: "white",
+            backgroundColor: "black",
+        })
+        setColorClass("black");
+    }
+    else {
+        setMyStyle({
+            color: "black",
+            backgroundColor: "white",
+        })
+        setColorClass("white");
+    }
+  }
+
   return (
     <>
+    <Router>
       <Navbar title="TextUtils" mode={mode} aboutText="About Us" textTheme={textTheme} toggleMode={toggleMode} />
       <Alert alert={alert} />
-      <TestForm showAlert={showAlert} heading="Enter the Text to analyze" mode={mode} />
-      <About mode={mode} />
+        <div className="container">
+          <Routes>
+            <Route path="/about" element={<About textTheme={textTheme}/>}>
+            </Route>
+            <Route path="/Home" element={<TestForm showAlert={showAlert} heading="Enter the Text to analyze" mode={mode} />}>
+            </Route>
+          </Routes>
+        </div>
+        </Router>
     </>
   );
 }
