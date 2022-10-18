@@ -2,11 +2,10 @@ import React, { useState } from 'react'
 
 
 export default function TestForm(props) {
-    
+
     let textarea = {
         overflowY: 'scroll',
         height:'300px',
-        backgroundColor:"white-grey"
     }
     const handleUpUppercase = () => {
         let upperText = text.toUpperCase();
@@ -31,14 +30,20 @@ export default function TestForm(props) {
     }
 
     const handleUpExtraSpace = () => {
-        const regex = /\s+/g;
-        const result = text.replace(regex, ' ');
-        setText(result)
+        const result = text.split(/[ ]+/);
+        setText(result.join(" "))
     }
 
     const handleUpClearText = () => {
         const result = text.replace(text, '');
         setText(result)
+    }
+
+    const handleUpCopyText = () => {
+        let copyText = document.getElementById('myBox');
+        copyText.select();
+        navigator.clipboard.writeText(copyText.value);
+
     }
 
     const handleOnChange = (event) => {
@@ -60,6 +65,7 @@ export default function TestForm(props) {
                 <button className="btn btn-primary" onClick={handleUpNewLine}>Remove New Line</button>
                 <button className="btn btn-primary mx-2" onClick={handleUpExtraSpace}>Remove Extra Spaces</button>
                 <button className="btn btn-primary" onClick={handleUpClearText}>Clear Text</button>
+                <button className="btn btn-primary mx-2" onClick={handleUpCopyText}>Copy Text</button>
             </div>
 
             <div className="container">
