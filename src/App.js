@@ -26,12 +26,14 @@ function App() {
       setTextTheme('Enable LightMode');
       document.body.style.backgroundColor = "#150037";
       showAlert("Dark mode has enabled!", "success");
+      document.title = "TextUtils - Dark Mode";
     }
     else {
       setMode('light')
       setTextTheme('Enable DarkMode');
       document.body.style.backgroundColor = "white";
       showAlert("Light mode has enabled!", "success");
+      document.title = "TextUtils - Light Mode";
 
     }
 
@@ -41,7 +43,7 @@ function App() {
       <Navbar title="TextUtils" mode={mode} aboutText="About Us" textTheme={textTheme} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <TestForm showAlert={showAlert} heading="Enter the Text to analyze" mode={mode} />
-      <About />
+      <About mode={mode} />
     </>
   );
 }

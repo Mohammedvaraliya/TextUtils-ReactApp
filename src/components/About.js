@@ -31,6 +31,7 @@ export default function About() {
 
     return (
         <>
+        <body>
             <main style={myStyle}>
                 <div className="container py-4"  style={myStyle} >
                     <div className="container">
@@ -65,6 +66,7 @@ export default function About() {
                     </footer>
                 </div>
             </main>
+            </body>
         </>
     )
 }
