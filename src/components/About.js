@@ -34,7 +34,7 @@ export default function About() {
             <main style={myStyle}>
                 <div className="container py-4"  style={myStyle} >
                     <div className="container">
-                        <button type="button" class="btn btn-primary" onClick={applyStyles}>{btnText}</button>
+                        <button type="button" className="btn btn-primary" onClick={applyStyles}>{btnText}</button>
                     </div>
                     <h1>About Us</h1>
 
