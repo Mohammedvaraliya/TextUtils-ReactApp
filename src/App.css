@@ -8,3 +8,8 @@
 	font-family: arial;
 	color: #f7f7f7;
 }
+
+.textarea {
+	overflow:scroll;
+	height:100px;
+}

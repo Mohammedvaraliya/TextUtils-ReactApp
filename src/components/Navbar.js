@@ -3,8 +3,13 @@ import PropTypes from 'prop-types'
 
 
 export default function Navbar(props) {
+
+    // let bodyStyle = {
+    //     backgrounfColor: "grey",
+    // }
+
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
                 <a className="navbar-brand" href="/">{props.title}</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,11 +24,11 @@ export default function Navbar(props) {
                             <a className="nav-link" href="/">{props.aboutText}</a>
                         </li>
                     </ul>
-                    <form className="d-flex" role="search">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success" type="submit">Search</button>
-                    </form>
                 </div>
+                {/* <div className="form-check form-switch" style={bodyStyle}>
+                    <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+                        <label className="form-check-label" Htmlfor="flexSwitchCheckDefault">Enable Dark Mode</label>
+                </div> */}
             </div>
         </nav>
     )

@@ -2,6 +2,12 @@ import React, { useState } from 'react'
 
 
 export default function TestForm(props) {
+    
+    let textarea = {
+        overflowY: 'scroll',
+        height:'300px',
+        backgroundColor:"white-grey"
+    }
     const handleUpUppercase = () => {
         let upperText = text.toUpperCase();
         setText(upperText);
@@ -40,7 +46,6 @@ export default function TestForm(props) {
     }
 
     const [text, setText] = useState("");
-    const [wordCount, setWordCount] = useState("0");
 
     return (
         <>
@@ -63,7 +68,7 @@ export default function TestForm(props) {
                 <p><b>{0.008 * text.split(" ").length} Minutes Read</b></p>
                 <br />
                 <h2>Preview</h2>
-                <pre className='mycode'><b>{text}</b></pre>
+                <pre style={textarea}><b>{text}</b></pre>
             </div>
         </>
     )
