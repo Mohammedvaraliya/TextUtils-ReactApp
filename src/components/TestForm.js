@@ -40,6 +40,8 @@ export default function TestForm(props) {
     }
 
     const [text, setText] = useState("");
+    const [wordCount, setWordCount] = useState("0");
+
     return (
         <>
             <div className="container my-4">
@@ -53,6 +55,15 @@ export default function TestForm(props) {
                 <button className="btn btn-primary" onClick={handleUpNewLine}>Remove New Line</button>
                 <button className="btn btn-primary mx-2" onClick={handleUpExtraSpace}>Remove Extra Spaces</button>
                 <button className="btn btn-primary" onClick={handleUpClearText}>Clear Text</button>
+            </div>
+
+            <div className="container">
+                <h2>Your text summary</h2>
+                <p>character Count: {text.length} | Word Count: {text.split(" ").length}</p>
+                <p><b>{0.008 * text.split(" ").length} Minutes Read</b></p>
+                <br />
+                <h2>Preview</h2>
+                <pre className='mycode'><b>{text}</b></pre>
             </div>
         </>
     )
