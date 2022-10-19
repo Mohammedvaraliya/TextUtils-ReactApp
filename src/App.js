@@ -14,11 +14,6 @@ function App() {
   const [mode, setMode] = useState("light");
   const [textTheme, setTextTheme] = useState("Enable DarkMode");
   const [alert, setAlert] = useState(null);
-  const [colorClass, setColorClass] = useState("");
-  const [myStyle, setMyStyle] = useState({
-    color: "black",
-    backgroundColor: "white",
-  });
 
   const showAlert = (message, type) => {
     setAlert({
@@ -50,23 +45,6 @@ function App() {
 
   }
 
-  const applyStyles = () => {
-    if (myStyle.color === 'black') {
-        setMyStyle({
-            color: "white",
-            backgroundColor: "black",
-        })
-        setColorClass("black");
-    }
-    else {
-        setMyStyle({
-            color: "black",
-            backgroundColor: "white",
-        })
-        setColorClass("white");
-    }
-  }
-
   return (
     <>
     <Router>
@@ -74,9 +52,9 @@ function App() {
       <Alert alert={alert} />
         <div className="container">
           <Routes>
-            <Route path="/about" element={<About textTheme={textTheme}/>}>
+            <Route path="/about" element={<About textTheme={textTheme} toggleMode={toggleMode} mode={mode}/>}>
             </Route>
-            <Route path="/Home" element={<TestForm showAlert={showAlert} heading="Enter the Text to analyze" mode={mode} />}>
+            <Route path="/" element={<TestForm showAlert={showAlert} heading="Enter the Text to analyze" mode={mode} />}>
             </Route>
           </Routes>
         </div>

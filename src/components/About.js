@@ -23,7 +23,7 @@ export default function About(props) {
             setMyStyle({
                 color: "black",
                 backgroundColor: "white",
-            })
+            });
             setBtnText("Enable Dark Mode");
             setColorClass("white");
         }
@@ -31,16 +31,16 @@ export default function About(props) {
 
     return (
         <>
-        <body>
-            <main style={myStyle}>
-                <div className="container py-4"  style={myStyle} >
-                    <div className="container">
+        <body style={{backgroundColor: props.mode==='dark'?document.body.style.backgroundColor = "#150037":'white'}}>
+            <main  style={{color: props.mode==='light'?'black':'white'}}>
+                <div className="container py-4"  style={{backgroundColor: props.mode==='dark'?'#150037':'white', color: props.mode==='dark'?'white':'black'}} >
+                    {/* <div className="container">
                         <button type="button" className="btn btn-primary" onClick={applyStyles}>{btnText}</button>
-                    </div>
+                    </div> */}
                     <h1>About Us</h1>
 
-                    <div className={`p-5 mb-4 bg-${colorClass} border rounded-3`} style={myStyle}>
-                        <div className="container-fluid py-5 rounded-3" style={myStyle}>
+                    <div className={`p-5 mb-4 bg-${colorClass} border rounded-3`} style={{backgroundColor: props.mode==='dark'?'#5d5d5d':'white', color: props.mode==='dark'?'white':'black'}}>
+                        <div className="container-fluid py-5 rounded-3" style={{backgroundColor: props.mode==='dark'?'black':'white', color: props.mode==='dark'?'white':'black'}}>
                             <h3 className="display-5 fw-bold">Varaliya's TextUtils.com</h3>
                             <p className="col-md-8 fs-4">Text-Utils is a web tool to assist developers and other people in daily tasks by providing tools for manipulating text data. This tool include <b> Remove Punctuations, UPPERCASE, New Line Remove, Numbers Remover, and Extra Spaces Remover</b>, and many other tools to handle text.</p>
                         </div>
@@ -54,14 +54,14 @@ export default function About(props) {
                                 <button className="btn btn-outline-light" type="button">Learn more...</button>
                             </div>
                         </div>
-                        <div className="col-md-6" style={myStyle}>
-                            <div className={`h-100 p-5 bg-${colorClass} border rounded-3`} style={myStyle}>
-                                <h3 style={myStyle}><br /><br /> <i> "If you want to increase your success rate, double your failure rate." </i></h3>
+                        <div className="col-md-6" style={{backgroundColor: props.mode==='dark'?'black':'white', color: props.mode==='dark'?'white':'black'}}>
+                            <div className={`h-100 p-5 bg-${colorClass} rounded-3`} style={{backgroundColor: props.mode==='dark'?'black':'white', color: props.mode==='dark'?'white':'black'}}>
+                                <h3 style={{backgroundColor: props.mode==='dark'?'black':'white', color: props.mode==='dark'?'white':'black'}}><br /><br /> <i> "If you want to increase your success rate, double your failure rate." </i></h3>
                             </div>
                         </div>
                     </div>
 
-                    <footer className="pt-3 mt-4 border-top" style={myStyle}>
+                    <footer className="pt-3 mt-4 border-top" style={{backgroundColor: props.mode==='dark'?'black':'white', color: props.mode==='dark'?'white':'black'}}>
                         © 2022
                     </footer>
                 </div>

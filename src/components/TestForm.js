@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
 import Alert from './Alert';
-
+import "./App.css"
 
 export default function TestForm(props) {
 
     let textarea = {
         backgroundColor: 'rgba(0,0,0,.1)',
         overflowY: 'scroll',
-        height:'300px',
+        height: '300px',
+        padding: "30px",
         boxShadow: 'inset 0 0 6px rgba(0,0,0,0.00)',
-        webkitBoxShadow: 'inset 0 0 6px rgba(0,0,0,0.00)',
+        webkitBoxShadow: '#0066ff 0px 0px 6px inset',
         '*::-webkit-scrollbar-thumb': {
             backgroundColor: '#01007e',
             outline: '1px solid slategrey'
@@ -69,13 +70,13 @@ export default function TestForm(props) {
 
     const showAlert = (message, type) => {
         setAlert({
-          msg: message,
-          type: type
+            msg: message,
+            type: type
         });
         setTimeout(() => {
             setAlert(null);
-          }, 1500);
-    
+        }, 1500);
+
     }
 
     const [text, setText] = useState("");
@@ -83,11 +84,11 @@ export default function TestForm(props) {
 
     return (
         <>
-            <div className="container my-4" style={{color: props.mode==='light'?'black':'white'}}>
+            <div className="container my-4" style={{ color: props.mode === 'light' ? 'black' : 'white' }}>
                 <h1>{props.heading}</h1>
                 <div className="mb-3">
-                    <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor: props.mode==='dark'?'#002f5e':'white', color: props.mode==='dark'?'white':'black'}} id="myBox" rows="12"></textarea>
-                    <Alert alert={alert}/>
+                    <textarea className="form-control" value={text} onChange={handleOnChange} style={{ backgroundColor: props.mode === 'dark' ? '#002f5e' : 'white', color: props.mode === 'dark' ? 'white' : 'black' }} id="myBox" rows="12"></textarea>
+                    <Alert alert={alert} />
                 </div>
                 <button className="btn btn-primary mx-2" onClick={handleUpUppercase}>Convert To Uppercase</button>
                 <button className="btn btn-primary" onClick={handleUpLower}>Convert To Lowercase</button>
@@ -98,14 +99,18 @@ export default function TestForm(props) {
                 <button className="btn btn-primary mx-2" onClick={handleUpCopyText}>Copy Text</button>
             </div>
 
-            <div className="container"  style={{color: props.mode==='light'?'black':'white'}}>
+            <div className="container" style={{ color: props.mode === 'light' ? 'black' : 'white' }}>
                 <h2>Your text summary</h2>
                 <br />
-                <p>character Count: {text.length} | Word Count: {text.length>0?text.split(" ").length:"0"}</p>
+                <p>character Count: {text.length} | Word Count: {text.length > 0 ? text.split(" ").length : "0"}</p>
                 <p>{0.008 * text.split(" ").length} Minutes Read</p>
                 <br />
                 <h2>Preview</h2>
-                <pre style={textarea}><br/>{text.length>0?text:"  Enter something in the TextBox above to preview it here."}</pre>
+                
+                <pre style={textarea}>
+                    <p><br />{text.length > 0 ? text : "Enter something in the TextBox above to preview it here."}</p>
+                </pre>
+                
             </div>
         </>
     )
