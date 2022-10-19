@@ -25,6 +25,18 @@ export default function TestForm(props) {
         showAlert("Converted to lowercase!", "success");
     }
 
+    const handleUpCapitalizeCase = () => {
+        const words = text.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
+        setText(words);
+        showAlert("Capitalized the first letter of each words!", "success");
+    }
+
+    const handleUpTitleCase = () => {
+        const words = text.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
+        setText(words);
+        showAlert("Capitalized the first letter of each words!", "success");
+    }
+
     const handleUpNewLine = () => {
         const regex = /\n/g;
         const result = text.replace(regex, '');
@@ -58,6 +70,12 @@ export default function TestForm(props) {
         setCopy("Copied")
     }
 
+    const handleUpSentenceCase = () => {
+        var newString = text.toLowerCase().replace(/(^\s*\w|[\.\!\?]\s*\w)/g,function(c){return c.toUpperCase()});
+        setText(newString);
+        showAlert("Converted to sentence case!", "success");
+    }
+
     const handleOnChange = (event) => {
         setText(event.target.value)
     }
@@ -85,13 +103,16 @@ export default function TestForm(props) {
                     <textarea className="form-control" value={text} onChange={handleOnChange} style={{ backgroundColor: props.mode === 'dark' ? '#002f5e' : 'white', color: props.mode === 'dark' ? 'white' : 'black' }} id="myBox" rows="12"></textarea>
                     <Alert alert={alert} />
                 </div>
-                <button className="btn btn-primary mx-2" onClick={handleUpUppercase}>Convert To Uppercase</button>
-                <button className="btn btn-primary" onClick={handleUpLower}>Convert To Lowercase</button>
-                <button className="btn btn-primary mx-2" onClick={handleUpPunctuations}>Remove Punctuations</button>
-                <button className="btn btn-primary" onClick={handleUpNewLine}>Remove New Line</button>
-                <button className="btn btn-primary mx-2" onClick={handleUpExtraSpace}>Remove Extra Spaces</button>
-                <button className="btn btn-primary" onClick={handleUpClearText}>Clear Text</button>
-                <button className="btn btn-primary mx-2" onClick={handleUpCopyText}>Copy Text</button>
+                <button className="btn btn-primary mx-2 my-2" onClick={handleUpUppercase}>Convert To Uppercase</button>
+                <button className="btn btn-primary  my-2" onClick={handleUpLower}>Convert To Lowercase</button>
+                <button className="btn btn-primary mx-2  my-2" onClick={handleUpPunctuations}>Remove Punctuations</button>
+                <button className="btn btn-primary  my-2" onClick={handleUpCapitalizeCase}>Capitalize Case</button>
+                <button className="btn btn-primary mx-2  my-2" onClick={handleUpNewLine}>Remove New Line</button>
+                <button className="btn btn-primary  my-2" onClick={handleUpExtraSpace}>Remove Extra Spaces</button>
+                <button className="btn btn-primary mx-2  my-2" onClick={handleUpClearText}>Clear Text</button>
+                <button className="btn btn-primary  my-2" onClick={handleUpCopyText}>Copy Text</button>
+                <button className="btn btn-primary mx-2  my-2" onClick={handleUpTitleCase}>Title Case</button>
+                <button className="btn btn-primary my-2" onClick={handleUpSentenceCase}>Sentence Case</button>
             </div>
 
             <div className="container" style={{ color: props.mode === 'light' ? 'black' : 'white' }}>
@@ -102,7 +123,6 @@ export default function TestForm(props) {
                 <br />
                 <h2>Preview</h2>
 
-                <div>
                     <div className={`bg-${props.mode==='light'?'light':'dark'} p-5 rounded`} style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
                         <button className='btn' id='copyBtn-clipboard' onClick={handleUpCopyTextArea} style={{ color: props.mode === 'dark' ? 'white' : 'black' }}><img className='copyImg' src="https://cdn-icons-png.flaticon.com/512/3073/3073464.png"
                             title="Click to Copy" alt='copy'
@@ -111,7 +131,6 @@ export default function TestForm(props) {
                         <p><br />{text.length > 0 ? text : "Enter something in the TextBox above to preview it here."}</p>
                         </pre>
                     </div>
-                </div>
 
             </div>
         </>
