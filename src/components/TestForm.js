@@ -102,7 +102,7 @@ export default function TestForm(props) {
 
                 <div>
                     <div className={`bg-${props.mode==='light'?'light':'dark'} p-5 rounded`} style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
-                        <button className='btn' id='copyBtn-clipboard' onClick={handleUpCopyTextArea} style={{ color: props.mode === 'dark' ? 'white' : 'black' }}><img className='copyImg' src="https://cdn-icons-png.flaticon.com/512/2168/2168942.png"
+                        <button className='btn' id='copyBtn-clipboard' onClick={handleUpCopyTextArea} style={{ color: props.mode === 'dark' ? 'white' : 'black' }}><img className='copyImg' src="https://cdn-icons-png.flaticon.com/512/3073/3073464.png"
                             title="Click to Copy" alt='copy'
                         /><br /><p id='copyTextMsge'>{copyToClipboard}</p></button>
                         <pre>
