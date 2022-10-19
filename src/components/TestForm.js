@@ -129,7 +129,7 @@ export default function TestForm(props) {
                             title={copyToClipboard} alt='copy'
                         /><br /><p id='copyTextMsge'>{copyToClipboard}</p></button>
                         <pre>
-                        <p><br />{text.length > 0 ? text : "Enter something in the TextBox above to preview it here."}</p>
+                        <p><br />{text.length > 0 ? text : "Oppps! Nothing to preview."}</p>
                         </pre>
                     </div>
 
