@@ -4,6 +4,8 @@ import "./App.css"
 
 export default function TestForm(props) {
 
+    document.title = "TextUtils - Home";
+
     const handleUpUppercase = () => {
         let upperText = text.toUpperCase();
         setText(upperText);
