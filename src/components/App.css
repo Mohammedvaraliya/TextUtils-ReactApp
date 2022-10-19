@@ -5,7 +5,7 @@
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg: #080808;
     --bs-btn-hover-border-color: #0a58ca;
-    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: #0a58ca;
     --bs-btn-active-border-color: #0a53be;
@@ -16,13 +16,7 @@
 }
 
 
-#copyBtn-clipboard {
-    top: 743px;
-    right: 328px;
-    position:absolute;
-    border: #0d6efd;
-}
-
-.copyImg{
+.copyImg {
     max-width: 25px;
 }
+

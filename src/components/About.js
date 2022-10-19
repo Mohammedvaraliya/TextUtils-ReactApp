@@ -34,9 +34,6 @@ export default function About(props) {
         <body style={{backgroundColor: props.mode==='dark'?document.body.style.backgroundColor = "#150037":'white'}}>
             <main  style={{color: props.mode==='light'?'black':'white'}}>
                 <div className="container py-4"  style={{backgroundColor: props.mode==='dark'?'#150037':'white', color: props.mode==='dark'?'white':'black'}} >
-                    {/* <div className="container">
-                        <button type="button" className="btn btn-primary" onClick={applyStyles}>{btnText}</button>
-                    </div> */}
                     <h1>About Us</h1>
 
                     <div className={`p-5 mb-4 bg-${colorClass} border rounded-3`} style={{backgroundColor: props.mode==='dark'?'#5d5d5d':'white', color: props.mode==='dark'?'white':'black'}}>

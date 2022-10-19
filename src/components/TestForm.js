@@ -4,21 +4,6 @@ import "./App.css"
 
 export default function TestForm(props) {
 
-    let textarea = {
-        backgroundColor: 'rgba(0,0,0,.1)',
-        overflowY: 'scroll',
-        height: '300px',
-        padding: "30px",
-        boxShadow: 'inset 0 0 6px rgba(0,0,0,0.00)',
-        webkitBoxShadow: '#0066ff 0px 0px 6px inset',
-        '*::-webkit-scrollbar-thumb': {
-            backgroundColor: '#01007e',
-            outline: '1px solid slategrey'
-        },
-        webkitBorderRadius: '20px',
-        mozBorderRadius: '20px',
-        borderRadius: "20px",
-    }
     const handleUpUppercase = () => {
         let upperText = text.toUpperCase();
         setText(upperText);
@@ -114,13 +99,16 @@ export default function TestForm(props) {
                 <p>{0.008 * text.split(" ").length} Minutes Read</p>
                 <br />
                 <h2>Preview</h2>
+
                 <div>
-                    <pre style={textarea}>
+                    <div className={`bg-${props.mode==='light'?'light':'dark'} p-5 rounded`} style={{ color: props.mode === 'dark' ? 'white' : 'black' }}>
+                        <button className='btn' id='copyBtn-clipboard' onClick={handleUpCopyTextArea} style={{ color: props.mode === 'dark' ? 'white' : 'black' }}><img className='copyImg' src="https://cdn-icons-png.flaticon.com/512/2168/2168942.png"
+                            title="Click to Copy" alt='copy'
+                        /><br /><p id='copyTextMsge'>{copyToClipboard}</p></button>
+                        <pre>
                         <p><br />{text.length > 0 ? text : "Enter something in the TextBox above to preview it here."}</p>
-                        <div><button className='btn copyBtn-clipboard' id='copyBtn-clipboard' onClick={handleUpCopyTextArea} style={{color: props.mode === 'dark' ? 'white' : 'black' }}><img className='copyImg' src="https://cdn-icons-png.flaticon.com/512/2168/2168942.png"
-                            title="Click to Copy"
-                        /><br/><p id='copyTextMsge'>{copyToClipboard}</p></button></div>
-                    </pre>
+                        </pre>
+                    </div>
                 </div>
 
             </div>
