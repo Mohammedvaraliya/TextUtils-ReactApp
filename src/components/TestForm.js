@@ -64,6 +64,13 @@ export default function TestForm(props) {
         showAlert("Copied to Clipboard!", "success");
     }
 
+    const handleUpCopyTextArea = () => {
+        let copyText = document.getElementById('myBox');
+        copyText.select();
+        navigator.clipboard.writeText(copyText.value);
+        setCopy("Copied")
+    }
+
     const handleOnChange = (event) => {
         setText(event.target.value)
     }
@@ -81,6 +88,7 @@ export default function TestForm(props) {
 
     const [text, setText] = useState("");
     const [alert, setAlert] = useState(null);
+    const [copyToClipboard, setCopy] = useState("");
 
     return (
         <>
@@ -106,11 +114,15 @@ export default function TestForm(props) {
                 <p>{0.008 * text.split(" ").length} Minutes Read</p>
                 <br />
                 <h2>Preview</h2>
-                
-                <pre style={textarea}>
-                    <p><br />{text.length > 0 ? text : "Enter something in the TextBox above to preview it here."}</p>
-                </pre>
-                
+                <div>
+                    <pre style={textarea}>
+                        <p><br />{text.length > 0 ? text : "Enter something in the TextBox above to preview it here."}</p>
+                        <div><button className='btn copyBtn-clipboard' id='copyBtn-clipboard' onClick={handleUpCopyTextArea} style={{color: props.mode === 'dark' ? 'white' : 'black' }}><img className='copyImg' src="https://cdn-icons-png.flaticon.com/512/2168/2168942.png"
+                            title="Click to Copy"
+                        /><br/><p id='copyTextMsge'>{copyToClipboard}</p></button></div>
+                    </pre>
+                </div>
+
             </div>
         </>
     )

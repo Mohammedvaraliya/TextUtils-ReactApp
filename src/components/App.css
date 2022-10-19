@@ -1,9 +1,9 @@
 .btn-primary {
-    --bs-btn-color: #fff;
+    --bs-btn-color: rgb(255, 255, 255);
     --bs-btn-bg: #003480;
     --bs-btn-border-color: #0d6efd;
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #0b5ed7;
+    --bs-btn-hover-bg: #080808;
     --bs-btn-hover-border-color: #0a58ca;
     --bs-btn-focus-shadow-rgb: 49,132,253;
     --bs-btn-active-color: #fff;
@@ -15,48 +15,14 @@
     --bs-btn-disabled-border-color: #0d6efd;
 }
 
-.input_copy_wrapper{
-    width: auto;
-    padding: auto;
-    margin : auto;
-  }
-  .input_copy {
-      padding: auto;
-      background: #eee;
-      border: 2px solid #aaa;
-      color: #aaa;
-      font-size: .8em;
-  }
-  
-  .input_copy .icon {
-      display: block;
-      max-width: auto;
-      cursor: pointer;
-      float: right;
-  }
-  
-  .input_copy .icon img{
+
+#copyBtn-clipboard {
+    top: 743px;
+    right: 328px;
+    position:absolute;
+    border: #0d6efd;
+}
+
+.copyImg{
     max-width: 25px;
-  }
-  .input_copy .txt {
-      width: auto;
-      overflow: hidden;
-  }
-  
-  
-  /* click animation */
-  
-  .flashBG {
-      animation-name: flash;
-      animation-timing-function: ease-out;
-      animation-duration: 1s;
-  }
-  
-  @keyframes flash {
-      0% {
-          background: #28a745;
-      }
-      100% {
-          background: transparent;
-      }
-  }
+}
