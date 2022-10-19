@@ -1,41 +1,40 @@
 # TextUtils
-This textutils website for modify your text like. Remove punctuations, Remove newline character, Remove extra spaces, To make the text in uppercase, To count the character ..... Hope You Enjoyed!!
+This textutils website for modify your text like. Remove punctuations, Remove newline character, Remove extra spaces, Convert To Uppercase, Convert To Lowercase, Clear Text, Copy Text To make the text in uppercase, To count the character ..... Hope You Enjoyed!!
 
 A tool for analyzing text data in Django backend
 
-It is a simple django project or website in which we can Analyze text.
+It is a simple <b>React</b> project or website in which we can Analyze text.
 
 # Check This Website
 
-https://textutilssystem.herokuapp.com/
+<a href="https://mohammedvaraliya.github.io/TextUtils-ReactApp/">Click Here To Visit Website!</a>
 
 <h1>What Can We do from Textutils ?</h1>
-1)Remove Punctuations<br>
-2)UPPERCASE<br>
-3)New Line Remove<br>
-4)Extra Spaces Remover<br>
-5)Numbers Remover
+1. Convert To Uppercase<br>
+2. Convert To Lowercase<br>
+3. Remove Punctuations<br>
+4. Remove New Line<br>
+5. Remove Extra Spaces<br>
+6. Clear Text<br>
+7. Copy Text
 
 # Website overview
 
-![image](https://user-images.githubusercontent.com/95087498/174474988-0120df37-b7b0-4632-990f-d07d958070e2.png)
+![image](https://user-images.githubusercontent.com/95087498/196742750-eb0d919a-222e-4a35-bf4c-bb199a695849.png)
 
 
-![image](https://user-images.githubusercontent.com/95087498/174475026-90ef1095-d098-4325-890f-b62147669ac1.png)
+![image](https://user-images.githubusercontent.com/95087498/196743003-513c1821-daca-4340-8695-3eec780457d0.png)
 
 
-![image](https://user-images.githubusercontent.com/95087498/174475097-a63cc292-46cb-4771-ac2c-e00063844c32.png)
+![image](https://user-images.githubusercontent.com/95087498/196743136-61f97aeb-77e9-43b6-8743-4fa024348bb7.png)
 
 
-
-
-# Check My Website demo video on YouTube
-
-https://www.youtube.com/watch?v=gtJisFVyO_U&t=80s
 
 <h1>Requirements</h1>
-python3<br>
-django<br>
+JavaScript<br>
+React<br>
+HTML<br>
+CSS<br>
 
 # Thank you!
 
