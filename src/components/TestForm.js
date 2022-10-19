@@ -97,7 +97,7 @@ export default function TestForm(props) {
             <div className="container" style={{ color: props.mode === 'light' ? 'black' : 'white' }}>
                 <h2>Your text summary</h2>
                 <br />
-                <p>character Count: {text.length} | Word Count: {text.length > 0 ? text.split(" ").length : "0"}</p>
+                <p>character Count: {text.length} | Word Count: {text.length > 0 ? text.split(" ").length-1 : "0"}</p>
                 <p>{0.008 * text.split(" ").length} Minutes Read</p>
                 <br />
                 <h2>Preview</h2>
