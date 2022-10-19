@@ -53,7 +53,7 @@ function App() {
           <Routes>
             <Route path="/about" element={<About textTheme={textTheme} toggleMode={toggleMode} mode={mode}/>}>
             </Route>
-            <Route path="/" element={<TestForm showAlert={showAlert} heading="Enter the Text to analyze" mode={mode} />}>
+            <Route path="/" element={<TestForm showAlert={showAlert} heading="Enter the Text to analyze Remove punctuations, Remove newline character, Remove extra spaces, Convert To Uppercase, Convert To Lowercase, Clear Text, Copy Text, Sentence Case, Title Case." mode={mode} />}>
             </Route>
           </Routes>
         </div>

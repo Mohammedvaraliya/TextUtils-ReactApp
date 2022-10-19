@@ -61,7 +61,7 @@ export default function About(props) {
                     </div>
 
                     <footer className="pt-3 mt-4 border-top" style={{backgroundColor: props.mode==='dark'?'black':'white', color: props.mode==='dark'?'white':'black'}}>
-                        © 2022
+                        © 2022 TextUtils-ReactApp.in
                     </footer>
                 </div>
             </main>
