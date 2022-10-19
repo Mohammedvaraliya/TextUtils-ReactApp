@@ -1,7 +1,7 @@
 # TextUtils
 This textutils website for modify your text like. Remove punctuations, Remove newline character, Remove extra spaces, Convert To Uppercase, Convert To Lowercase, Clear Text, Copy Text To make the text in uppercase, To count the character ..... Hope You Enjoyed!!
 
-A tool for analyzing text data in Django backend
+A tool for analyzing text data in ReactJs Based Application
 
 It is a simple <b>React</b> project or website in which we can Analyze text.
 
