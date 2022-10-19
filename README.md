@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# TextUtils
+This textutils website for modify your text like. Remove punctuations, Remove newline character, Remove extra spaces, To make the text in uppercase, To count the character ..... Hope You Enjoyed!!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A tool for analyzing text data in Django backend
 
-## Available Scripts
+It is a simple django project or website in which we can Analyze text.
 
-In the project directory, you can run:
+# Check This Website
 
-### `npm start`
+https://textutilssystem.herokuapp.com/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h1>What Can We do from Textutils ?</h1>
+1)Remove Punctuations<br>
+2)UPPERCASE<br>
+3)New Line Remove<br>
+4)Extra Spaces Remover<br>
+5)Numbers Remover
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Website overview
 
-### `npm test`
+![image](https://user-images.githubusercontent.com/95087498/174474988-0120df37-b7b0-4632-990f-d07d958070e2.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+![image](https://user-images.githubusercontent.com/95087498/174475026-90ef1095-d098-4325-890f-b62147669ac1.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](https://user-images.githubusercontent.com/95087498/174475097-a63cc292-46cb-4771-ac2c-e00063844c32.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Check My Website demo video on YouTube
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+https://www.youtube.com/watch?v=gtJisFVyO_U&t=80s
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<h1>Requirements</h1>
+python3<br>
+django<br>
 
-## Learn More
+# Thank you!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I really appreciate all kinds of feedback and contributions. Please feel free to contribute in this project to learn or improve this.
