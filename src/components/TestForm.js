@@ -145,7 +145,7 @@ export default function TestForm(props) {
                     </div>
 
             </div>
-            <footer className="pt-3 mt-4 border-top" style={{backgroundColor: props.mode==='dark'?'black':'white', color: props.mode==='dark'?'white':'black'}}>
+            <footer className="pt-2 mt-4 mx-5 border-top rounded-2" style={{backgroundColor: props.mode==='dark'?'black':'white', color: props.mode==='dark'?'white':'black'}}>
                         © 2022 TextUtils-ReactApp.in
                     </footer>
         </>
