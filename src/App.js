@@ -13,6 +13,7 @@ function App() {
   const [mode, setMode] = useState("light");
   const [textTheme, setTextTheme] = useState("Enable DarkMode");
   const [alert, setAlert] = useState(null);
+  const [activeComp, setActiveComp] = useState("");
 
   const showAlert = (message, type) => {
     setAlert({
@@ -44,6 +45,15 @@ function App() {
 
   }
 
+  const setActiveComponent = () => {
+    if (activeComp === ""){
+        setActiveComp("active");
+    }
+    else{
+        setActiveComp("");
+    }
+  }
+
   return (
     <>
     <Router>
@@ -51,9 +61,9 @@ function App() {
       <Alert alert={alert} />
         <div className="container">
           <Routes>
-            <Route path="/about" element={<About textTheme={textTheme} toggleMode={toggleMode} mode={mode}/>}>
+            <Route path="/about" element={<About textTheme={textTheme} activeComp={activeComp} toggleMode={toggleMode} mode={mode}/>}>
             </Route>
-            <Route path="/" element={<TestForm showAlert={showAlert} heading="Enter the Text to analyze Remove punctuations, Remove newline character, Remove extra spaces, Convert To Uppercase, Convert To Lowercase, Clear Text, Copy Text, Sentence Case, Title Case." mode={mode} />}>
+            <Route path="/" element={<TestForm showAlert={showAlert} activeComp={activeComp} heading="Enter the Text to analyze Remove punctuations, Remove newline character, Remove extra spaces, Convert To Uppercase, Convert To Lowercase, Clear Text, Copy Text, Sentence Case, Title Case." mode={mode} />}>
             </Route>
           </Routes>
         </div>

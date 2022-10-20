@@ -64,19 +64,13 @@ export default function TestForm(props) {
     }
 
     const handleUpCopyText = () => {
-        let copyText = document.getElementById('myBox');
-        copyText.select();
-        navigator.clipboard.writeText(copyText.value);
-        document.getSelection().removeAllRanges();
+        navigator.clipboard.writeText(text);
         showAlert("Copied to Clipboard!", "success");
         setCopy("Copied");
     }
 
     const handleUpCopyTextArea = () => {
-        let copyText = document.getElementById('myBox');
-        copyText.select();
-        navigator.clipboard.writeText(copyText.value);
-        document.getSelection().removeAllRanges();
+        navigator.clipboard.writeText(text);
         setCopy("Copied");
     }
 
@@ -84,6 +78,12 @@ export default function TestForm(props) {
         var newString = text.toLowerCase().replace(/(^\s*\w|[\.\!\?]\s*\w)/g,function(c){return c.toUpperCase()});
         setText(newString);
         showAlert("Converted to sentence case!", "success");
+    }
+
+    const handleUpNonAlpha = () => {
+        const newString = text.replace(/[^a-z0-9]/gi, '');
+        setText(newString);
+        showAlert("Removed all non-alphanumeric Characters!", "success");
     }
 
     const handleOnChange = (event) => {
@@ -124,6 +124,7 @@ export default function TestForm(props) {
                 <button disabled={text.length===0} className="btn btn-primary btn-sm mx-2  my-2" onClick={handleUpCopyText}>Copy Text</button>
                 <button disabled={text.length===0} className="btn btn-primary btn-sm my-2" onClick={handleUpTitleCase}>Title Case</button>
                 <button disabled={text.length===0} className="btn btn-primary btn-sm mx-2 my-2" onClick={handleUpSentenceCase}>Sentence Case</button>
+                <button disabled={text.length===0} className="btn btn-primary btn-sm my-2" onClick={handleUpNonAlpha}>Remove Non-Alphanumeric</button>
             </div>
 
             <div className="container" style={{ color: props.mode === 'light' ? 'black' : 'white' }}>
