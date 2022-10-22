@@ -45,7 +45,7 @@ export default function About(props) {
                         </div>
                     </div>
 
-                    <div className="row align-items-md-stretch">
+                    <div className="row align-items-md-stretch mb-3">
                         <div className="col-md-6">
                             <div className="h-100 p-5 text-bg-dark rounded-4">
                                 <h2>About Me</h2>
@@ -54,7 +54,7 @@ export default function About(props) {
                             </div>
                         </div>
                         <div className="col-md-6 border rounded-4" style={{backgroundColor: props.mode==='dark'?'black':'white', color: props.mode==='dark'?'white':'black'}}>
-                            <div className={`h-100 p-5 bg-${colorClass}`} style={{backgroundColor: props.mode==='dark'?'black':'white', color: props.mode==='dark'?'white':'black'}}>
+                            <div className={`h-100 mb-3 p-5 bg-${colorClass}`} style={{backgroundColor: props.mode==='dark'?'black':'white', color: props.mode==='dark'?'white':'black'}}>
                                 <h3 style={{backgroundColor: props.mode==='dark'?'black':'white', color: props.mode==='dark'?'white':'black'}}><br /><br /> <i> "If you want to increase your success rate, double your failure rate." </i></h3>
                             </div>
                         </div>
