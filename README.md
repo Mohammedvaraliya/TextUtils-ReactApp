@@ -13,22 +13,55 @@ It is a simple <b>React</b> project or website in which we can Analyze text.
 1. Convert To Uppercase<br>
 2. Convert To Lowercase<br>
 3. Remove Punctuations<br>
-4. Remove New Line<br>
-5. Remove Extra Spaces<br>
-6. Clear Text<br>
-7. Copy Text
+4. Capitalize Case<br>
+5. Remove New Line<br>
+6. Remove Extra Spaces<br>
+7. Remove Numbers<br>
+8. Clear Text<br>
+9. Copy Text<br>
+10. Title Case<br>
+11. Sentence Case<br>
+12. Remove Non-Alphanumeric<br>
 
 # Website overview
 
-![image](https://user-images.githubusercontent.com/95087498/196742750-eb0d919a-222e-4a35-bf4c-bb199a695849.png)
+**App Preview :**
 
-
-![image](https://user-images.githubusercontent.com/95087498/196743003-513c1821-daca-4340-8695-3eec780457d0.png)
-
-
-![image](https://user-images.githubusercontent.com/95087498/196743136-61f97aeb-77e9-43b6-8743-4fa024348bb7.png)
-
-
+<table width="100%"> 
+<tr>
+<td width="50%">      
+&nbsp; 
+<br>
+<p align="center">
+  Feed Home(Light Mode)
+</p>
+<img src="https://github.com/Mohammedvaraliya/TextUtils-ReactApp/assets/95087498/d8708071-6efe-43a5-a7d8-29204a9ceca4">
+</td> 
+<td width="50%">
+<br>
+<p align="center">
+  Feed Home(Dark Mode)
+</p>
+<img src="https://github.com/Mohammedvaraliya/TextUtils-ReactApp/assets/95087498/5b2d48ed-2a50-4228-b13d-ed7286eff043">
+</td>
+</tr>
+<tr>
+<td width="50%">
+<br>
+<p align="center">
+  Performing Operation
+</p>
+<img src="https://github.com/Mohammedvaraliya/TextUtils-ReactApp/assets/95087498/a03ef631-19c0-4f79-aa6b-837050799638">
+</td>
+<td width="50%">
+<br>
+<p align="center">
+  About Page
+</p>
+<img src="https://github.com/Mohammedvaraliya/TextUtils-ReactApp/assets/95087498/ca1b9b65-a0f2-4ca8-9150-71cf4c4d2aca">
+</td>
+</tr>
+</table>
 
 <h1>Requirements</h1>
 JavaScript<br>
